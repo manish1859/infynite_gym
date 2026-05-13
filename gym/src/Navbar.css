@@ -1,0 +1,36 @@
+/* Custom Styles for React Bootstrap Navbar */
+.gym-navbar {
+  background-color: #000000 !important;
+  font-family: 'Oswald', sans-serif;
+  padding: 15px 0;
+}
+
+.nav-item-link {
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+/* Hover and Active State from your notes */
+.nav-item-link:hover, 
+.nav-item-link.active {
+  color: #f36100 !important; /* Exact Orange from notes */
+}
+
+.divider {
+  color: #444;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 991px) {
+  .nav-right-icons {
+    margin-top: 20px;
+    justify-content: center;
+  }
+}

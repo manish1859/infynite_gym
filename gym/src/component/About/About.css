@@ -1,0 +1,770 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Muli:wght@400;700&display=swap');
+
+.about-hero-section {
+  width: 100%;
+  height: 450px; 
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+              url('../../assets/breadcrumb-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+.nav-item {
+  text-decoration: none; 
+  color: #c4c4c4;
+  font-family: 'Oswald', sans-serif ;
+  transition: 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #f36100;
+}
+.about-hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-content h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0; /* Default margin hatayein taaki perfect center ho */
+  letter-spacing: 2px;
+}
+
+.breadcrumb {
+  margin-top: 8px; /* Aapke notes ke mutabik margin-top yahan aayega */
+}
+
+.breadcrumb p {
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+  color: #c4c4c4; 
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: #c4c4c4;
+  transition: 0.3s;
+}
+
+.breadcrumb-link:hover {
+  color: #f36100;
+}
+
+.breadcrumb span {
+  font-size: 18px;
+  color: #f36100; 
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (max-width:767px) {
+  .about-hero-content h2{
+    font-size: 38px;
+  }
+
+}
+
+/* Font Imports */
+
+.choseus-section {
+    background-color: #0a0a0a;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.section-title h2 {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 8px; /* Handwritten: margin-top 8px */
+    letter-spacing: 1px;
+}
+
+/* Small Heading (Span) - As per notes */
+.section-title span {
+    font-size: 16px;
+    color: #f36100;
+    text-transform: uppercase;
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Feature Titles (H4) - As per notes */
+.feature-item h4 {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 600; /* Handwritten: font-weigh 600 */
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* Description Text (P) - As per notes */
+.feature-item p {
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    color: #a9a9a9; /* Handwritten: #C4C4C4 */
+    line-height: 24px; /* Handwritten: line-light 24px */
+    font-weight: 400; /* Handwritten: font-width 400 */
+    margin: 0;
+}
+
+/* Icons Box & Hover */
+.icon-box {
+    width: 90px;
+    height: 90px;
+    background: #262626;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f36100;
+    margin: 0 auto 25px auto;
+    transition: 0.4s ease;
+}
+.about-icon{
+  color: #ffffff !important;
+  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+/* Hover Color - As per notes */
+.feature-item:hover .icon-box {
+    background-color: #f36100; /* bg - #f36100 */
+    color: #ffffff;           /* color - #ffffff */
+}
+
+/* Responsive Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+@media (max-width: 992px) {
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 576px) {
+    .features-grid { grid-template-columns: 1fr; }
+    .section-title h2{
+      font-size: 26px;
+    }
+    .feature-item p{
+      font-size: 13.50px;
+    }
+}
+.about-percentage-section {
+    background-color: #000000;
+    padding: 80px 20px 80px 0px;
+    color: #ffffff;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.about-percentage-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+/* Left Section */
+.about-percentage-left {
+    flex: 1;
+}
+
+.about-percentage-video-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.about-percentage-video-box img {
+    width: 100%;
+    height: auto;
+    height: 500px;
+    display: block;
+}
+
+.about-percentage-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    background-color: #f36100;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.about-percentage-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Right Section */
+.about-percentage-right {
+    flex: 1;
+}
+
+.about-percentage-sub {
+    color: #f36100;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.about-percentage-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.about-percentage-desc {
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    color: #c4c4c4;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* Progress Bars */
+.about-percentage-skill-item {
+    margin-bottom: 25px;
+}
+
+.about-percentage-skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.about-percentage-skill-info h4 {
+    font-family: 'Muli', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.about-percentage-bar-bg {
+    width: 100%;
+    height: 3px;
+    background-color: #222222;
+}
+
+.about-percentage-bar-fill {
+    height: 100%;
+    background-color: #ffffff;
+    transition: width 1.5s ease-in-out;
+}
+
+/* --- MODAL STYLES --- */
+.about-percentage-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.about-percentage-modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16/9;
+}
+
+.about-percentage-close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.about-percentage-video-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-percentage-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .about-percentage-title {
+        font-size: 28px;
+    }
+    .about-percentage-video-box img{
+      height: 400px;
+    }
+}
+
+.team-section {
+    background-color: #0c0c0c;
+    padding: 80px 50px;
+    color: #fff;
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.header-left span {
+    color: #f36100; /* Your notes orange color */
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.header-left h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.appointment-btn {
+    background: transparent;
+    border: 2px solid #f36100;
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.appointment-btn:hover {
+    background: #f36100 !important;
+}
+
+
+
+/* Card container ko relative aur overflow hidden hona chahiye */
+/* Card Container */
+.team-card {
+    position: relative;
+    width: 320px;
+    height: 450px; 
+    overflow: hidden; /* Bahar ka content chhupane ke liye */
+    background-color: #1a1a1a;
+}
+
+/* Container ko slide karne ke liye settings */
+.team-grid {
+    display: flex;
+    /* gap: 30px; */
+
+    /* overflow: hidden; */
+
+    scroll-behavior: smooth;
+
+    padding-bottom: 20px;
+
+    scrollbar-width: none;
+}
+
+.team-grid::-webkit-scrollbar{
+    display: none;
+}
+
+.team-card{
+    min-width: 300px;
+    flex-shrink: 0;
+}
+
+/* Card ki width fix karein taaki wo sikude nahi */
+.team-card {
+    position: relative;
+    min-width: calc(33.33% - 20px); /* Ek baar mein 3 card dikhane ke liye */
+    height: 450px;
+    overflow: hidden;
+    flex-shrink: 0; /* Card ko chota hone se rokta hai */
+    background-color: #1a1a1a;
+}
+
+/* Hover Scroll Effect (Jo pehle discuss kiya tha) */
+.member-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px 10px;
+    text-align: center;
+    transform: translateY(100%); /* Niche chupa hua */
+    transition: transform 0.5s ease-in-out;
+}
+
+.team-card:hover .member-info {
+    transform: translateY(0); /* Hover pe upar aayega */
+}
+
+.team-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth zoom */
+}
+
+/* Info Box - Jo niche se scroll hoke aayega */
+.member-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; /* Iski fixed height rakhein scroll feel ke liye */
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Pehle ye niche chupa rahega */
+    transform: translateY(100%); 
+    
+    /* Scrolling Animation Speed */
+    transition: transform 0.5s ease-in-out; 
+    z-index: 10;
+}
+
+/* Hover par scroll up effect */
+.team-card:hover .member-info {
+    transform: translateY(0); /* Niche se upar aa gaya */
+}
+
+/* Image thodi zoom hogi jab info upar aayegi */
+.team-card:hover img {
+    transform: scale(1.1);
+}
+
+.member-info h4 {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 22px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.member-info p {
+    color: #f36100;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+/* Dots Styling */
+.team-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.dot {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    display: inline-block;
+}
+
+.dot.active {
+    background: #f36100;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .team-grid { grid-template-columns: 1fr; }
+    .team-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+}
+
+.registration-section {
+    width: 100%;
+    min-height: 400px;
+    /* Apni image ka path yahan dein */
+    background-image: url('../../assets/banner-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+.registration-overlay {
+    background: rgba(0, 0, 0, 0.1); /* Dark overlay jaisa image mein hai */
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.registration-container {
+    max-width: 900px;
+}
+
+.registration-title {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 42px; /* Badi heading */
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.registration-subtitle {
+    font-family: 'Muli', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+/* Appointment Button */
+.appointment-btn-lg {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #f36100; /* Aapke notes ka orange color */
+    padding: 15px 40px;
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.appointment-btn-lg:hover {
+    background-color: #f36100;
+    color: #ffffff;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+    .registration-title {
+        font-size: 30px;
+    }
+    
+    .registration-subtitle {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .registration-section {
+        background-attachment: scroll; /* Mobile pe performance ke liye fixed hataya */
+    }
+}
+
+.testimonial-section {
+    background-color: #0a0a0a;
+    padding: 100px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.testimonial-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.appointment-btn {
+  position: relative;
+  overflow: hidden;
+
+  padding: 14px 35px;
+  border: 2px solid #000;
+  background: white;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.appointment-btn span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.btn-hover {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+
+  position: absolute;
+
+  left: var(--x);
+  top: var(--y);
+
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.7s ease;
+}
+
+.appointment-btn:hover .btn-hover {
+  transform: translate(-50%, -50%) scale(20);
+}
+
+.appointment-btn:hover span {
+  color: white;
+}
+
+/* Header */
+.testimonial-header span {
+    color: #f36100;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.testimonial-header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* Slider Layout */
+.testimonial-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Arrows */
+.slider-arrow {
+    background: #333333;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-arrow.left { left: -50px; }
+.slider-arrow.right { right: -50px; }
+
+.slider-arrow:hover {
+    background: #f36100;
+}
+
+/* Client Content */
+.client-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.client-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #c4c4c4;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-style: italic;
+}
+
+.client-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.client-stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .slider-arrow {
+        position: static;
+        margin: 20px 10px;
+        transform: none;
+    }
+    .testimonial-slider {
+        flex-wrap: wrap;
+    }
+}

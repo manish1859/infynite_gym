@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Muli:wght@400;700&display=swap');
+
+.about-hero-section {
+  width: 100%;
+  height: 450px; 
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+              url('../../assets/breadcrumb-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+.nav-item {
+  text-decoration: none; 
+  color: #c4c4c4;
+  font-family: 'Oswald', sans-serif ;
+  transition: 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #f36100;
+}
+.about-hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-content h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0; /* Default margin hatayein taaki perfect center ho */
+  letter-spacing: 2px;
+}
+
+.breadcrumb {
+  margin-top: 8px; /* Aapke notes ke mutabik margin-top yahan aayega */
+}
+
+.breadcrumb p {
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  color: #c4c4c4; 
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: #c4c4c4;
+  transition: 0.3s;
+}
+
+.breadcrumb-link:hover {
+  color: #f36100;
+}
+
+.breadcrumb span {
+  font-size: 16px;
+  color: #f36100; 
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (max-width:767px) {
+  .about-hero-content h2{
+    font-size: 38px;
+  }
+
+}
+.team-section {
+    background-color: #0c0c0c;
+    padding: 80px 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.team-container {
+    width: 100%;
+}
+
+/* ================= HEADER ================= */
+
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+
+    margin-bottom: 50px;
+}
+
+.header-left span {
+    color: #f36100;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.header-left h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* ================= BUTTON ================= */
+
+.appointment-btn {
+    position: relative;
+    overflow: hidden;
+
+    background: transparent;
+    border: 2px solid #f36100;
+    color: #fff;
+
+    padding: 12px 30px;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.appointment-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-hover {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f36100;
+
+    position: absolute;
+
+    left: var(--x);
+    top: var(--y);
+
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+}
+
+.appointment-btn:hover .btn-hover {
+    transform: translate(-50%, -50%) scale(20);
+}
+
+/* ================= TEAM GRID ================= */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ================= CARD ================= */
+
+.team-card {
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+    background: #3a3a3a;
+}
+
+.team-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: 0.5s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ================= OVERLAY ================= */
+
+.member-info {
+    position: absolute;
+    left: 0;
+    bottom: -220px;
+
+    width: 100%;
+    height: 220px;
+
+    background: #000;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.5s ease-in-out;
+
+    clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+}
+
+.team-card:hover .member-info {
+    bottom: 0;
+}
+
+/* ================= TEXT ================= */
+
+.member-info h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    padding-top: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.member-info p {
+    color: #f36100;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+/* ================= SOCIAL ================= */
+
+.member-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.member-social i {
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.member-social i:hover {
+    color: #f36100;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+    .team-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-right {
+        width: 100%;
+    }
+
+    .appointment-btn {
+        width: 100%;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .team-section {
+        padding: 60px 0;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .team-card {
+        height: 400px;
+    }
+
+    .member-info {
+        height: 200px;
+        bottom: -200px;
+    }
+
+    .member-info h4 {
+        font-size: 28px;
+    }
+
+    .header-left h2 {
+        font-size: 26px;
+    }
+}

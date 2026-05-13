@@ -131,6 +131,9 @@ const About = () => {
 
             <section className="choseus-section">
                 <div className="container">
+                    <div className="col-lg-10 mx-auto">
+
+                    
                     <div className="section-title">
                         <span>WHY CHOSE US?</span>
                         <h2>PUSH YOUR LIMITS FORWARD</h2>
@@ -144,7 +147,7 @@ const About = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div></div>
             </section>
 
             <section className="about-percentage-section">

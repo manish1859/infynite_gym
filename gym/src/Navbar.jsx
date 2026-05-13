@@ -1,48 +1,159 @@
-// import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { FaSearch, FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
+import React, { useState } from 'react';
 import './Navbar.css';
+import logo from './assets/logo.png';
 
-const GymNavbar = () => {
-  const menuItems = ['HOME', 'ABOUT US', 'CLASSES', 'SERVICES', 'OUR TEAM', 'PAGES', 'CONTACT'];
+import {
+  FaSearch,
+  FaFacebookF,
+  FaTwitter,
+  FaYoutube,
+  FaInstagram,
+  FaBars,
+  FaTimes
+} from 'react-icons/fa';
+
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(false);
 
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" className="gym-navbar sticky-top">
-      <Container fluid className="px-5">
-        {/* Logo Section */}
-        <Navbar.Brand href="#home" className="navbar-logo">
-          <img src="/gym-logo.png" alt="GYM LOGO" height="40" />
-        </Navbar.Brand>
+    <nav className="navbar">
+      <div className="container full-container">
+        <div className="col-lg-10 mx-auto w-100 ">
 
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto nav-menu">
-            {menuItems.map((item) => (
-              <Nav.Link 
-                key={item} 
-                href={`#${item.toLowerCase().replace(/\s+/g, '')}`}
-                className="nav-item-link px-3"
-              >
-                {item}
-              </Nav.Link>
-            ))}
-          </Nav>
 
-          <div className="nav-right-icons d-flex align-items-center">
-            <FaSearch className="text-white mx-2 pointer" />
-            <span className="divider mx-2">|</span>
-            <div className="social-links d-flex gap-3 ms-2">
-              <a href="#" className="text-white"><FaFacebookF /></a>
-              <a href="#" className="text-white"><FaTwitter /></a>
-              <a href="#" className="text-white"><FaYoutube /></a>
-              <a href="#" className="text-white"><FaInstagram /></a>
-            </div>
+      <div className="navbar-container">
+    
+        {/* Logo */}
+        <div className="navbar-logo">
+          <img src={logo} alt="logo" />
+        </div>
+
+        {/* Nav Links */}
+        <ul
+          className={isMobile ? 'nav-links-mobile' : 'nav-links'}
+          onClick={() => setIsMobile(false)}
+        >
+          <li>
+            <Link to="/" className="active">
+              HOME
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/about">
+              ABOUT US
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/classes">
+              CLASSES
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/service">
+              SERVICES
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/team">
+              OUR TEAM
+            </Link>
+          </li>
+
+          {/* Dropdown */}
+          <li className="nav-item has-dropdown">
+
+            <Link to="/pages">PAGES</Link>
+
+            <ul className="dropdown-menu">
+
+              <li>
+                <Link to="/about">
+                  About us
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/timetable">
+                  Classes timetable
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/bmi">
+                  Bmi calculate
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/team">
+                  Our team
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/gallery">
+                  Gallery
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/blog">
+                  Our blog
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/404">
+                  404
+                </Link>
+              </li>
+
+            </ul>
+          </li>
+
+          <li>
+            <Link to="/contact">
+              CONTACT
+            </Link>
+          </li>
+        </ul>
+
+        {/* Right Icons */}
+        <div className="navbar-icons">
+
+          <div className="search-icon">
+            <FaSearch />
           </div>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+
+          <div className="divider"></div>
+
+          <div className="social-icons">
+            <a href="#"><FaFacebookF /></a>
+            <a href="#"><FaTwitter /></a>
+            <a href="#"><FaYoutube /></a>
+            <a href="#"><FaInstagram /></a>
+          </div>
+
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="mobile-menu-icon"
+          onClick={() => setIsMobile(!isMobile)}
+        >
+          {isMobile ? <FaTimes /> : <FaBars />}
+        </button>
+
+      </div>        </div>
+      </div>
+    </nav>
   );
 };
 
-export default GymNavbar;
+export default Navbar;

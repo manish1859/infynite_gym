@@ -1,0 +1,1017 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ 
+/* ================= SLIDER ================= */
+.home-slider {
+  height: 100%;
+}
+
+.home-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.home-slide1 {
+  background-image: url("../../assets/hero-1.jpg");
+  height: 1040px;
+      /* padding-top: 355px; */
+          background-size: cover;
+    background-position: top center;
+        background-repeat: no-repeat;
+}
+
+.home-slide2 {
+  background-image: url("../../assets/hero-2.jpg");
+  height: 1040px;
+      /* padding-top: 355px; */
+          background-size: cover;
+    background-position: top center;
+        background-repeat: no-repeat;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  /* padding: 20px; */
+}
+
+
+ 
+/* CONTENT */
+.home-content {
+  position: absolute;
+  top: 35%;
+  left: 48%;
+  transform: translateY(-50%);
+  color: #fff;
+  
+  max-width: 650px;
+}
+
+.home-content span {
+  font-size: 16px;
+  letter-spacing: 4px;
+    font-family: "Oswald", sans-serif;
+
+  text-transform: uppercase;
+}
+
+.home-content h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 90px;
+  margin: 20px 0;
+    font-family: "Oswald", sans-serif;
+
+  text-transform: uppercase;
+}
+
+.highlight {
+  color: #f36100;
+  font-family: "Oswald", sans-serif;
+  font-size: 80px !important;
+  line-height: 85px !important;
+  text-transform: uppercase;
+}
+.home-animate {
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+.swiper-slide-active .home-animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+.home-content button {
+  background: #f36100;
+  border: none;
+  padding: 14px 30px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 992px) {
+  .home-navbar {
+    padding: 20px;
+  }
+
+  .home-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .home-menu.active {
+    display: flex;
+  }
+
+  .home-toggle {
+    display: block;
+  }
+
+  .home-icons {
+    display: none;
+  }
+
+  .home-content h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-content {
+    left: 5%;
+  }
+
+  .home-content h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+/* ================= WHY SECTION ================= */
+.home-why {
+  background: #000;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.home-subtitle {
+  font-size: 16px;
+  color: #f36100;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+      font-family: "Oswald", sans-serif;
+}
+
+.home-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 8px;
+  margin-bottom: 50px;
+      font-family: "Oswald", sans-serif;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.home-card {
+  text-align: center;
+}
+
+.home-icon {
+  width: 90px;
+  height: 90px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 32px;
+  color: #f36100;
+  transition: 0.3s;
+}
+
+.home-card:hover .home-icon {
+  background: #f36100;
+  color: #fff;
+}
+
+.home-card h4 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+      font-family: "Oswald", sans-serif;
+}
+
+.home-card p {
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+  color: #c4c4c4;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 992px) {
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-title {
+    font-size: 26px;
+  }
+}
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap'); */
+
+/* ================= GYM SECTION ================= */
+
+.gym-section {
+  background: #0a0a0a;
+  padding: 100px 0;
+  font-family: "Oswald", sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.gym-header-box {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gym-subtitle {
+  color: #f36100;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.gym-title {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ================= CARD ================= */
+
+.gym-class-card {
+  background: #111111;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+/* .gym-class-card:hover {
+  transform: translateY(-5px);
+} */
+
+/* ================= IMAGE ================= */
+
+.gym-image-box {
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+}
+
+.gym-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* transition: 0.5s ease; */
+}
+
+/* .gym-class-card:hover .gym-image-box img {
+  transform: scale(1.1);
+} */
+
+/* ================= DIAGONAL EFFECT ================= */
+
+.gym-diagonal-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 50px;
+
+  background: #444444;
+
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 92%);
+  z-index: 2;
+}
+
+.gym-diagonal-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 45px;
+
+  background: #111111;
+
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);
+  z-index: 3;
+}
+
+/* ================= INFO ================= */
+
+.gym-info-box {
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #111111;
+}
+
+.gym-category {
+  color: #f36100;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.gym-class-name {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ================= ARROW ================= */
+
+.gym-arrow-icon {
+  width: 45px;
+  height: 45px;
+
+  background: #2b2b2b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+.gym-arrow-icon::after {
+  content: ">";
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* 
+.gym-class-card:hover .gym-arrow-icon {
+  background: #f36100;
+} */
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+  .gym-section {
+    padding: 80px 0;
+  }
+
+  .gym-title {
+    font-size: 30px;
+  }
+
+  .gym-image-box {
+    height: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .gym-title {
+    font-size: 26px;
+  }
+
+  .gym-image-box {
+    height: 240px;
+  }
+
+  .gym-info-box {
+    padding: 20px;
+  }
+
+  .gym-class-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .gym-section {
+    padding: 60px 0;
+  }
+
+  .gym-title {
+    font-size: 22px;
+  }
+
+  .gym-image-box {
+    height: 220px;
+  }
+
+  .gym-class-name {
+    font-size: 18px;
+  }
+
+  .gym-category {
+    font-size: 12px;
+  }
+
+  .gym-arrow-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+ /*  card section */
+
+ 
+/* --- General Section Styling --- */
+.pricing-section {
+  background-color: #0c0c0c;
+  padding: 100px 20px;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-header {
+  margin-bottom: 80px;
+}
+
+.sub-header {
+     font-size: 16px;
+    color: #f36100;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.main-header {
+  color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+/* --- Grid Layout --- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  /* padding-top: 50px; */
+}
+
+/* --- THE SKEWED CARD EFFECT --- */
+.pricing-card {
+  background-color: #1a1a1a; /* Dark gray background */
+  border: 1px solid #333;
+  padding: 60px 40px;
+  position: relative;
+  transition: all 0.4s ease; /* Smooth transition for hover */
+  transform: skewY(-3deg); /* Card ko tilt karne ke liye */
+  cursor: pointer;
+}
+
+/* Card content ko wapas seedha (straight) karne ke liye */
+.card-content {
+  transform: skewY(3deg);
+}
+
+/* --- ACTIVE & HOVER STATES --- */
+/* Jab card active ho ya uspe mouse le jayein */
+.pricing-card.active-card, 
+.pricing-card:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.plan-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+/* Price Styling */
+.price-tag {
+  color: #ff4500; /* Orange color stays orange */
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.price-tag .currency {
+  font-size: 40px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.price-tag .amount {
+  font-size: 65px;
+  font-weight: 700;
+}
+
+.plan-type {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #c4c4c4;
+  margin-bottom: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Plan type color change on hover */
+.pricing-card.active-card .plan-type,
+.pricing-card:hover .plan-type {
+  color: #333;
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.feature-list li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+/* Feature list color change on hover */
+.pricing-card.active-card .feature-list li,
+.pricing-card:hover .feature-list li {
+  color: #444;
+}
+
+/* --- BUTTON STYLING --- */
+.enroll-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background-color: #333333; /* Default dark button */
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button becomes orange on card hover/active */
+.pricing-card.active-card .enroll-btn,
+.pricing-card:hover .enroll-btn {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .price-tag {
+    color: #ff4500;
+    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pricing-card {
+    /* transform: skewY(0deg); Mobile pe skew hatana better hai */
+    padding: 40px 20px;
+  }
+  
+  .card-content {
+    transform: skewY(0deg);
+  }
+  
+  .main-header {
+    font-size: 32px;
+  }
+  .plan-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+}
+
+
+ 
+ /* Gallery Container */
+ 
+.gallery-section {
+    background-color: #0c0c0c;
+    padding: 0; /* Image ke beech gap control karne ke liye */
+}
+
+.gallery-grid {
+    display: grid;
+    /* 4 barabar columns */
+    grid-template-columns: repeat(4, 1fr);
+    /* Ek row ki height fix kar di */
+    grid-auto-rows: 300px;
+    gap: 0px; /* Screenshots mein images ke beech gap nahi hai */
+}
+
+/* Gallery Items */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image stretch nahi hogi, crop hogi */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* --- MASONRY EFFECT (Badi Image) --- */
+.gallery-item.large {
+    /* Yeh image 2 columns aur 2 rows cover karegi */
+    grid-column: span 2;
+   
+}
+
+/* --- OVERLAY EFFECT --- */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark tint on hover */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Orange Icon in center */
+.gallery-overlay i {
+    color: #f36100; /* Theme Orange */
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tablet par 3 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mobile par 2 columns */
+        grid-auto-rows: 250px;
+    }
+    .gallery-item.large {
+        grid-column: span 2; /* Full width on small screens */
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Chote mobile par single column */
+        grid-auto-rows: 200px;
+    }
+    .gallery-item.large {
+        grid-column: span 1;
+    }
+}
+
+
+ 
+/* ================= TRAINER SECTION ================= */
+
+.trainers-section {
+  padding: 80px 0;
+  background-color: #151515;
+  overflow: hidden;
+}
+
+/* ================= TOP ================= */
+
+.trainer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 50px;
+}
+
+.sub-header {
+  color: #f36100;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.main-header {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* BUTTON */
+
+.trainers-btn {
+  width: 180px;
+  height: 56px;
+
+  background: transparent;
+  border: 2px solid #f36100;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: 0.4s ease;
+}
+
+.trainers-btn:hover {
+  background: #f36100;
+}
+
+/* ================= VIEWPORT ================= */
+
+.css-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ================= SLIDER ================= */
+
+.css-slider-wrapper {
+  display: flex;
+  gap: 20px;
+
+  /* transition: transform 0.8s ease-in-out; */
+}
+
+.css-slider-wrapper:hover {
+  animation-play-state: paused;
+}
+/* Reset time no animation */
+/* .css-slider-wrapper.no-transition {
+  transition: none;
+} */
+
+/* ================= CARD ================= */
+
+.trainer-card {
+  width: 345px;
+  height: 450px;
+
+  flex-shrink: 0;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #222;
+  cursor: pointer;
+}
+
+/* IMAGE */
+
+.trainer-image-box {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.trainer-image-box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+
+  transition: 0.5s ease;
+}
+
+/* ZOOM */
+
+.trainer-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ================= OVERLAY ================= */
+
+.trainer-info-overlay {
+  position: absolute;
+
+  left: 0;
+  bottom: -160px;
+
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.95);
+
+  text-align: center;
+
+  padding: 55px 20px 25px;
+
+  clip-path: polygon(0 28%, 100% 0%, 100% 100%, 0% 100%);
+
+  transition: 0.45s ease-in-out;
+}
+
+/* HOVER */
+
+.trainer-card:hover .trainer-info-overlay {
+  bottom: 0;
+}
+
+/* TEXT */
+
+.trainer-info-overlay h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.trainer-info-overlay p {
+  color: #f36100;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ================= AUTO SLIDER ================= */
+
+/* @keyframes trainerScroll {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  15% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-400px);
+  }
+
+  35% {
+    transform: translateX(-400px);
+  }
+
+  40% {
+    transform: translateX(-800px);
+  }
+
+  55% {
+    transform: translateX(-800px);
+  }
+
+  60% {
+    transform: translateX(-1200px);
+  }
+
+  75% {
+    transform: translateX(-1200px);
+  }
+
+  80% {
+    transform: translateX(-1600px);
+  }
+
+  95% {
+    transform: translateX(-1600px);
+  }
+
+  100% {
+    transform: translateX(-2000px);
+  }
+} */
+
+/* ================= 3 LINES ================= */
+
+.trainer-lines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+.trainer-lines span {
+  width: 22px;
+  height: 4px;
+
+  background: #555;
+
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.trainer-lines .active-line {
+  background: #f36100;
+  width: 28px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+  .trainer-top {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .trainer-card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main-header {
+    font-size: 32px;
+  }
+
+  .trainer-card {
+    width: 280px;
+    height: 400px;
+  }
+}

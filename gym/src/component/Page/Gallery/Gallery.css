@@ -1,0 +1,108 @@
+.gallery-section {
+    width: 100%;
+    background-color: #000;
+    padding: 0; /* Full width gallery ke liye */
+}
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Gap ko control karne ke liye margin ya gap dono use kar sakte hain */
+    gap: 10px; /* Maine 10px rakha hai, aap change kar sakte hain */
+}
+
+.gallery-item {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    height: 350px; 
+    cursor: pointer;
+}
+
+/* --- FIX: Width Calculation with Gap --- */
+
+/* col-lg-6 (2 images per row) */
+/* Formula: 50% width minus half of the gap */
+.col-lg-6 { 
+    width: calc(50% - 5px); 
+}
+
+/* col-lg-3 (4 images per row) */
+/* Formula: 25% width minus three-quarters of the gap */
+.col-lg-3 { 
+    width: calc(25% - 7.5px); 
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Overlay Styles (Same as before) */
+.gallery-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-hover {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVE FIX --- */
+
+@media (max-width: 992px) {
+    .col-lg-6, .col-lg-3 {
+        /* Tablet: 2 images per row minus half the gap */
+        width: calc(50% - 5px); 
+    }
+}
+
+@media (max-width: 576px) {
+    .col-lg-6, .col-lg-3 {
+        /* Mobile: Full width 100% (No calculation needed if only 1 item) */
+        width: 100%; 
+        height: 250px;
+    }
+}
+
+/* Modal and Close Button Styles (Same as before) */
+.gallery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 40px;
+}
+.gallery-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid #333;
+}
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

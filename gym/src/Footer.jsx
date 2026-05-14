@@ -93,7 +93,7 @@ const Footer = () => {
       {/* Copyright Bar */}
       <div className="copyright-bar">
         <div className="container">
-          <p>Copyright ©2026 All rights reserved | This template is made with ❤️ by <span className="highlight">Colorlib</span></p>
+          <p>Copyright ©2026 All rights reserved | This template is made with ❤️ by <span className="highlight1">Colorlib</span></p>
         </div>
       </div> </div>
       </div>

@@ -9,7 +9,7 @@
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 /* --- footer Bar --- */
@@ -154,7 +154,7 @@
     margin: 0;
 }
 
-.highlight {
+.highlight1 {
     color: #f36100;
     font-size: 12px;
 }
@@ -167,20 +167,44 @@
 }
 
 @media (max-width: 768px) {
+
     .footer-bar .container {
         flex-direction: column;
         align-items: flex-start;
+        padding: 5px;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    
-    .footer-col {
-        text-align: center;
+
+    /* Useful Links + Support ko side by side */
+    .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
     }
-    
+
+    .about-col,
+    .tips-col {
+        width: 100%;
+    }
+
+    .footer-col:not(.about-col):not(.tips-col) {
+        width: calc(50% - 15px);
+    }
+
     .social-links {
         justify-content: center;
+    }
+
+    .footer-col p {
+        align-items: start;
+    }
+    .footer-col h4{
+        font-size: 16px;
+    }
+    .footer-content{
+        padding: 12px 0px;
     }
 }

@@ -1,20 +1,15 @@
 import { Dumbbell, Utensils, HeartPulse, Activity} from 'lucide-react';
-// import { GiWeightLiftingUp } from "react-icons/gi";
 import { FaDollarSign } from "react-icons/fa";
 import{ useState, useEffect } from 'react';
-// import { FaSearch, FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaBars, } from "react-icons/fa"; 
+import { RxCross1 } from "react-icons/rx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import class1 from '../../assets/class-1.jpg'
 import class2 from '../../assets/class-2.jpg'
 import class3 from '../../assets/class-3.jpg'
 import class4 from '../../assets/class-4.jpg'
 import class5 from '../../assets/class-5.jpg'
-import gallery1 from '../../assets/gallery-1.jpg'
-import gallery2 from '../../assets/gallery-2.jpg'
-import gallery3 from '../../assets/gallery-3.jpg'
-import gallery4 from '../../assets/gallery-4.jpg'
-import gallery5 from '../../assets/gallery-5.jpg'
-import gallery6 from '../../assets/gallery-6.jpg'
+import img1 from '../../assets/team-1.jpg'
+import img2 from '../../assets/team-2.jpg'
 import team1 from '../../assets/team-1.jpg'
 import team2 from '../../assets/team-2.jpg'
 import team3 from '../../assets/team-3.jpg'
@@ -24,25 +19,17 @@ import team6 from '../../assets/team-6.jpg'
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import { FaRegImage } from "react-icons/fa";
 import "./Home.css";
 
 import { Navigation, Autoplay } from "swiper/modules";
 
 const Home = () => {
-  // const [menuOpen, setMenuOpen] = useState(false);
 
 const [activeIndex, setActiveIndex] = useState(0);
-// const [transition, setTransition] = useState(true);
 const [isTransition, setIsTransition] = useState(true);
- 
+  const [selectedImg, setSelectedImg] = useState(null);
 
-  // const data = [
-  //   { cat: "STRENGTH", title: "WEIGHTLIFTING", img: class1 },
-  //   { cat: "CARDIO", title: "INDOOR CYCLING", img: class2 },
-  //   { cat: "STRENGTH", title: "KETTLEBELL POWER", img: class3 },
-  //   { cat: "CARDIO", title: "INDOOR CYCLING", img: class4 },
-  //   { cat: "TRAINING", title: "BOXING", img: class5 },
-  // ];
       const features = [
         {
             icon: <Activity size={40} />,
@@ -90,6 +77,17 @@ const [isTransition, setIsTransition] = useState(true);
       active: false
     }
   ];
+    const galleryImages = [
+      { id: 1, src: img1, className: 'col-lg-6' }, 
+      { id: 2, src: img2, className: 'col-lg-3' },
+      { id: 3, src: img1, className: 'col-lg-3' },
+      { id: 4, src: img2, className: 'col-lg-3' },
+      { id: 5, src: img1, className: 'col-lg-3' },
+      { id: 6, src: img2, className: 'col-lg-6' }, 
+      { id: 7, src: img1, className: 'col-lg-6' }, 
+      { id: 8, src: img2, className: 'col-lg-3' },
+      { id: 9, src: img1, className: 'col-lg-3' },
+    ];
 
  const trainers = [
   { id: 1, name: "Athart Rachel", role: "GYM TRAINER", img: team1 },
@@ -382,7 +380,7 @@ useEffect(() => {
 
 
 
-      <section className="pricing-section">
+<section className="pricing-section">
         <div className="container">
           <div className="col-lg-10 mx-auto">
           <div className="pricing-header">
@@ -396,10 +394,13 @@ useEffect(() => {
                 <div className="card-content">
                   <h3 className="plan-title">{plan.title}</h3>
                   <div className="price-tag">
+                    <div className="Price-container">
                     <span className="currency"><FaDollarSign /></span>
                     <span className="amount">{plan.price}</span>
+                    </div>
+                      <p className="plan-type">{plan.type}</p>
                   </div>
-                  <p className="plan-type">{plan.type}</p>
+                
 
                   <ul className="feature-list">
                     {plan.features.map((feature, i) => (
@@ -416,66 +417,35 @@ useEffect(() => {
       </section>
 
 
+     <section className="gallery-section">
+      <div className="container">
+        <div className="col-lg-10 mx-auto">
 
-<section className="gallery-section">
-    <div className="container">
-      <div className="col-lg-10 mx-auto">
-  <div className="gallery-grid">
-
-
-  
-
-    <div className="gallery-item large">
-      <img src={gallery1} alt="Gym training" />
-
-      <div className="gallery-overlay">
-        <i className="fa-regular fa-image"></i>
+        <div className="row">
+      <div className="gallery-grid">
+        {galleryImages.map((img) => (
+          <div 
+            key={img.id} 
+            className={`gallery-item ${img.className}`}
+            onClick={() => setSelectedImg(img.src)}
+          >
+            <img src={img.src} alt="Gym Gallery" />
+            <div className="gallery-hover">
+              <FaRegImage size={40} color="#f36100" />
+            </div>
+          </div>
+        ))}
+                </div></div>
       </div>
-    </div>
-
-    <div className="gallery-item">
-      <img src={gallery2} alt="Gym training" />
-
-      <div className="gallery-overlay">
-        <i className="fa-regular fa-image"></i>
       </div>
-    </div>
 
-    <div className="gallery-item">
-      <img src={gallery3} alt="Gym training" />
-
-      <div className="gallery-overlay">
-        <i className="fa-regular fa-image"></i>
-      </div>
-    </div>
-
-    <div className="gallery-item">
-      <img src={gallery4} alt="Gym training" />
-
-      <div className="gallery-overlay">
-        <i className="fa-regular fa-image"></i>
-      </div>
-    </div>
-
-    <div className="gallery-item">
-      <img src={gallery5} alt="Gym training" />
-
-      <div className="gallery-overlay">
-        <i className="fa-regular fa-image"></i>
-      </div>
-    </div>
-    <div className="gallery-item large">
-      <img src={gallery6} alt="Gym training" />
-
-      <div className="gallery-overlay">
-        <i className="fa-regular fa-image"></i>
-      </div>
-    </div>    </div>
-    </div>
-
-  </div>
-
-</section>
+      {selectedImg && (
+        <div className="gallery-modal" onClick={() => setSelectedImg(null)}>
+          <button className="close-modal"><RxCross1 size={40} color="#fff" /></button>
+          <img src={selectedImg} alt="Enlarged" onClick={(e) => e.stopPropagation()} />
+        </div>
+      )}
+    </section> 
 
 
 

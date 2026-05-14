@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Muli:wght@400;700&display=swap');
+
+.bmi-section {
+    background-color: #0c0c0c;
+    padding: 100px 20px;
+    color: #ffffff;
+}
+
+.bmi-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* Common Header Styles */
+.bmi-sub {
+    font-family: 'Muli', sans-serif;
+    color: #f36100;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 2px;
+}
+
+.bmi-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px; /* As per notes */
+    font-weight: 600; /* As per notes */
+    text-transform: uppercase;
+    margin-top: 8px; /* As per notes */
+    margin-bottom: 30px;
+}
+
+/* Left Side: Chart Table */
+.bmi-chart-area {
+    flex: 1;
+}
+
+.bmi-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Muli', sans-serif;
+}
+
+.bmi-table th, .bmi-table td {
+    border: 1px solid #333;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.bmi-table th {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.bmi-table td {
+    color: #c4c4c4; /* As per notes */
+}
+
+/* Right Side: Form Area */
+.bmi-form-area {
+    flex: 1.2;
+}
+
+.bmi-desc {
+    font-family: 'Muli', sans-serif;
+    font-size: 14px; 
+    color: #c4c4c4;
+    line-height: 24px; 
+    margin-bottom: 30px;
+}
+
+.bmi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bmi-input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.bmi-form input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #333;
+    padding: 15px 20px;
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.bmi-calculate-btn {
+    background-color: #f36100; /* As per notes */
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.bmi-calculate-btn:hover {
+    background-color: #ff6a00;
+}
+
+.bmi-result {
+    margin-top: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.bmi-result span {
+    color: #f36100;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 992px) {
+    .bmi-container {
+        flex-direction: column;
+    }
+    
+    .bmi-chart-area, .bmi-form-area {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .bmi-input-group {
+        flex-direction: column;
+    }
+    
+    .bmi-title {
+        font-size: 26px;
+    }
+}

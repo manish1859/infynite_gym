@@ -1,0 +1,326 @@
+/* ================= SECTION ================= */
+
+.timetable-section {
+  width: 100%;
+  background: #0a0a0a;
+  padding: 100px 5%;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ================= TOP ================= */
+
+.timetable-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.timetable-top span {
+  color: #f36100;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.timetable-top h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* ================= TABS ================= */
+
+.tabs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: #000;
+  padding: 18px 25px;
+}
+
+.tabs button {
+  background: transparent;
+  border: none;
+  color: #bdbdbd;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.tabs button:hover,
+.tabs button.active {
+  color: #fff;
+}
+
+/* ================= TABLE ================= */
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.gym-table {
+  width: 100%;
+  min-width: 1200px;
+
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* ================= TH ================= */
+
+.gym-table th {
+  background: #f36100;
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  padding: 15px;
+  border: 1px solid #2c2c2c;
+  text-align: center;
+}
+
+/* ================= TD ================= */
+
+.gym-table td {
+  width: 12.5%;
+  height: 100px;
+  
+
+  background: #000;
+
+  border: 1px solid #222;
+
+  text-align: center;
+  vertical-align: middle;
+
+  /* padding: 20px; */
+
+  transition: 0.4s ease;
+
+  position: relative;
+}
+
+/* ================= HOVER ================= */
+
+.gym-table td:hover:not(.empty-cell):not(.time-cell) {
+  background: #f36100;
+}
+
+.gym-table td:hover:not(.empty-cell):not(.time-cell) h3,
+.gym-table td:hover:not(.empty-cell):not(.time-cell) p {
+  color: #fff;
+}
+
+/* ================= TIME CELL ================= */
+
+.time-cell {
+  color: #f36100;
+  font-size: 12px;
+   min-width: 220px;
+  background: #000000;
+}
+
+/* ================= TEXT ================= */
+
+.gym-table h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.gym-table p {
+  color: #bdbdbd;
+  font-size: 12px;
+  line-height: 1.5;
+  transition: 0.4s ease;
+}
+
+/* ================= EMPTY CELL ================= */
+
+.empty-cell {
+  background: #111;
+  overflow: hidden;
+}
+
+.empty-cell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top left,
+    transparent 49.5%,
+    #333 50%,
+    transparent 50.5%
+  );
+}
+
+/* ================= LARGE SCREEN ================= */
+
+@media (max-width: 1200px) {
+
+  .gym-table {
+    min-width: 1100px;
+  }
+
+  .gym-table h3 {
+    font-size: 18px;
+  }
+
+  .gym-table p {
+    font-size: 15px;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+  .timetable-section {
+    padding: 80px 30px;
+  }
+
+  .timetable-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timetable-top h2 {
+    font-size: 28px;
+  }
+
+  .tabs {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .tabs button {
+    font-size: 15px;
+  }
+
+  .gym-table th {
+    font-size: 18px;
+    padding: 20px 10px;
+  }
+
+  .gym-table td {
+    height: 160px;
+    padding: 15px;
+  }
+
+  .time-cell {
+    font-size: 18px;
+  }
+
+  .gym-table h3 {
+    font-size: 17px;
+  }
+
+  .gym-table p {
+    font-size: 14px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .timetable-section {
+    padding: 70px 20px;
+  }
+
+  .timetable-top h2 {
+    font-size: 24px;
+  }
+
+  .timetable-top span {
+    font-size: 15px;
+  }
+
+  .tabs {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .tabs button {
+    font-size: 14px;
+  }
+
+  .gym-table {
+    min-width: 950px;
+  }
+
+  .gym-table th {
+    font-size: 16px;
+    padding: 18px 8px;
+  }
+
+  .gym-table td {
+    height: 140px;
+    padding: 12px;
+  }
+
+  .time-cell {
+    font-size: 16px;
+    min-width: 180px;
+  }
+
+  .gym-table h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .gym-table p {
+    font-size: 13px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .timetable-section {
+    padding: 60px 15px;
+  }
+
+  .timetable-top h2 {
+    font-size: 20px;
+  }
+
+  .tabs {
+    gap: 10px;
+  }
+
+  .tabs button {
+    font-size: 13px;
+  }
+
+  .gym-table {
+    min-width: 850px;
+  }
+
+  .gym-table td {
+    height: 120px;
+  }
+
+  .gym-table h3 {
+    font-size: 14px;
+  }
+
+  .gym-table p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,332 @@
+/* ================= SECTION ================= */
+
+.training-section {
+  background: #111111;
+  padding: 80px 0;
+}
+
+/* ================= TITLE ================= */
+
+.section-title {
+  margin-bottom: 60px;
+}
+
+.section-title span {
+  color: #f36100;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+/* ================= IMAGE BOX ================= */
+
+.training-img {
+  height: 350px;
+  overflow: hidden;
+}
+
+.training-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= CONTENT BOX ================= */
+
+.training-content {
+  background: #1a1a1a;
+  height: 350px;
+  padding: 20px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* right arrow shape */
+
+.training-content::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  transform: translateY(-50%);
+
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 18px solid #1a1a1a;
+
+  z-index: 2;
+}
+
+.training-content h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.training-content p {
+  color: #c4c4c4;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 25px;
+}
+
+.training-content a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.training-content:hover {
+    background-color: rgb(26, 26, 26,0.1);
+    /* color: #f36100; */
+}
+.training-content:hover a{
+    background-color: rgb(26, 26, 26,0.1);
+    color: #f36100;
+}
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .section-title h2 {
+    font-size: 42px;
+  }
+
+  .training-content h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .training-img,
+  .training-content {
+    height: 320px;
+  }
+
+  .section-title h2 {
+    font-size: 36px;
+  }
+
+  .training-content {
+    padding: 40px 25px;
+  }
+
+  .training-content::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .training-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .training-content h3 {
+    font-size: 24px;
+  }
+
+  .training-content p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .training-img,
+  .training-content {
+    height: auto;
+  }
+
+  .training-content {
+    padding: 35px 20px;
+  }
+
+  .section-title span {
+    font-size: 14px;
+  }
+
+  .section-title h2 {
+    font-size: 22px;
+  }
+
+  .training-content h3 {
+    font-size: 22px;
+  }
+
+  .training-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .training-content a {
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* HeroSection.css */
+
+.hero-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-banner {
+  background-image: url("https://themewagon.github.io/gymlife/img/banner-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 550px;
+  position: relative;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  padding: 20px;
+}
+
+.hero-content h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.play-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+
+  background: #f36100;
+  color: #fff;
+
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+
+  transition: 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+  background: #ff7b1c;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-banner {
+    height: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+  }
+
+  .hero-content p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 420px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .play-btn {
+    width: 65px;
+    height: 65px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-banner {
+    height: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .play-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+}

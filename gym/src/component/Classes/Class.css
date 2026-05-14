@@ -1,0 +1,300 @@
+.img-fluid{
+    height: 380px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-box {
+  padding: 0px;
+  border-radius: 5px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row p:first-child {
+  color: #000000;
+  font-weight: 600;
+}
+
+.info-row p:last-child {
+  color: #504f4f;
+}
+
+.class-trainer{
+    padding: 10px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 576px) {
+  .info-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .info-row p:last-child {
+    text-align: left;
+  }
+}
+
+.categories-box {
+  background: transparent;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: #c4c4c4 !important;
+  border-bottom: 1px solid #1f1f1f;
+  transition: 0.3s;
+}
+
+.cat-row:last-child {
+  border-bottom: none;
+}
+
+.cat-row:hover {
+  color: #f36100;
+  cursor: pointer;
+}
+
+.class-img{
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .cat-row {
+    font-size: 14px;
+  }
+
+  .img-fluid{
+    height: 300px;
+    width: 100%;
+  }
+
+  .class-img{
+    padding: 5px;
+  }
+}
+
+.latest-posts .title {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.post-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Overlay */
+.post-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.post-overlay h6 {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.post-overlay p {
+  font-size: 12px;
+  color: #c4c4c4;
+  margin-top: 5px;
+}
+
+.post-overlay p {
+  margin: 0 5px;
+}
+
+/* Hover effect */
+.post-card:hover img {
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .post-card img {
+    height: 160px;
+  }
+
+  .post-overlay h6 {
+    font-size: 14px;
+  }
+}
+
+.latest-list .title {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.post-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.post-item img {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.post-content h6 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  transition: 0.3s;
+}
+
+.post-content p {
+  font-size: 13px;
+  color: #c4c4c4;
+  margin-top: 5px;
+}
+
+/* Hover */
+.post-item:hover h6 {
+  color: #f36100;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .post-item img {
+    width: 70px;
+    height: 60px;
+  }
+
+  .post-content h6 {
+    font-size: 14px;
+  }
+}
+
+.sidebar-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-top: auto;
+}
+
+.sidebar-banner img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Text Overlay */
+.banner-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+/* Optional dark overlay */
+.sidebar-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .sidebar-banner img {
+    height: 250px;
+  }
+
+  .banner-text {
+    font-size: 16px;
+  }
+}
+
+.classes-main{
+    background-color: #080808;
+    padding: 50px 0;
+}
+
+/* SAME HEIGHT FIX */
+.classes-main .row{
+  display: flex;
+  align-items: stretch;
+}
+
+.class-img{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+  .classes-main .row{
+    display: block;
+  }
+
+  .img-box img{
+    min-height: auto;
+    height: auto;
+  }
+
+  .sidebar-wrapper{
+    margin-top: 30px;
+  }
+}
